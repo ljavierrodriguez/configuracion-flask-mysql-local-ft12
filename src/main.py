@@ -10,7 +10,7 @@ app.config['ENV'] = 'development'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'dialect+driver://user:pass@ip-server:port/database'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localhost:3306/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost:3306/test'
 db.init_app(app)
 Migrate(app, db)
 CORS(app)
